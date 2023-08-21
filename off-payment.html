@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>티켓 결제</title>
+</head>
+<body>
+    <div class="mobile-container">
+        <section class="header-area">
+            <nav class="top-area wrapper">
+                <a class="back" onclick="history.back();">
+                    <img src="/img/back.png" alt="뒤로 가기">
+                </a>
+                <span>예매하기</span>
+                <div class="search-notice">
+                    <button>🔍</button>
+                </div>
+            </nav>
+        </section>
+        <section class="off-main">
+            <div class="off-movie-wrapper light">
+                <section class="off-order-area">
+                    <h3>티켓 내역</h3>
+                    <div class="selected-ticket-list">
+                        <article class="selected-ticket-item wrapper">
+                            <span class="off-name">서울국제여성영화제</span>
+                            <span class="ticket-title">한국장편경쟁1. [멜로가 체질]</span>
+                            <span class="ticket-price">5,000퍼니</span>
+                            <span class="ticket-cancel"></span>
+                        </article>
+                        <article class="selected-ticket-item wrapper">
+                            <span class="off-name">영화제</span>
+                            <span class="ticket-title">영화제목</span>
+                            <span class="ticket-price">5,000퍼니</span>
+                            <span class="ticket-cancel"></span>
+                        </article>
+                    </div>
+                    <div class="ticket-total wrapper">
+                        <span>합계</span>
+                        <span class="total-count">2편</span>
+                        <span class="total-price">5,500퍼니</span>
+                    </div>
+                </section>
+                <section class="off-payment-user-area">
+                    <h3>결제자</h3>
+                    <div>
+                        <span>영심이</span>
+                        <span>(010-9999-9999)</span>
+                    </div>
+                    <div>
+                        <span>qkkqkkkqk@purplay.co.kr</span>
+                    </div>
+                </section>
+                <section class="off-payment-area">
+                    <div class="payment-option">
+                        <h4>쿠폰(초대권/ID카드)</h4>
+                        <div>
+                            <span>00개</span>
+                            <button> > </button>
+                        </div>
+                    </div>
+                    <div class="payment-option">
+                        <h4>포인트</h4>
+                        <div>
+                            <span>1,000포인트</span>
+                            <button> > </button>
+                        </div>
+                    </div>
+                    <div class="payment-option">
+                        <h4>최종 티켓 금액</h4>
+                        <span>0퍼니</span>
+                    </div>
+                    <div class="payment-option">
+                        <h4>보유 퍼니</h4>
+                        <span>10,000퍼니</span>
+                    </div>
+                </section>
+                <section class="off-payment-price-area">
+                    <h3>최종 결제 금액</h3>
+                    <span>7,000퍼니 = 7,000퍼니</span>
+                </section>
+                <section class="off-user-guide">
+                    <div>
+                        <h4>이용 유의사항</h4>
+                        <p>어쩌구..</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="bottom-area">
+            <div class="bottom-btn-area">
+                <button class="get-ticket">
+                    결제하기
+                </button>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const $getTktBtn = document.querySelector('.get-ticket');
+    console.log($getTktBtn);
+
+    $getTktBtn.addEventListener('click', () => {
+        location.href = "./off-ticketing-complete.html";
+    });
+
+</script>
+</html>

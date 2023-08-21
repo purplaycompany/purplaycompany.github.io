@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>티켓 예매 완료</title>
+</head>
+<body>
+    <div class="mobile-container">
+        <section class="header-area">
+            <nav class="top-area wrapper">
+                <a class="back" onclick="history.back();">
+                    <img src="/img/back.png" alt="뒤로 가기">
+                </a>
+                <span>예매 완료</span>
+                <div class="search-notice">
+                    <button>🔍</button>
+                </div>
+            </nav>
+        </section>
+        <section class="off-main">
+            <div class="off-movie-wrapper light">
+                <section class="off-order-area">
+                    <h3>예매 내역</h3>
+                    <div class="selected-ticket-list">
+                        <article class="selected-ticket-item wrapper">
+                            <span class="off-name">서울국제여성영화제</span>
+                            <span class="ticket-title">한국장편경쟁1. [멜로가 체질]</span>
+                            <button class="ticket-play-btn">관람하기</button>
+                        </article>
+                        <article class="selected-ticket-item wrapper">
+                            <span class="off-name">영화제</span>
+                            <span class="ticket-title">영화제목</span>
+                            <button class="ticket-play-btn">관람하기</button>
+                        </article>
+                    </div>
+                    <div class="ticket-total wrapper">
+                        <span>합계</span>
+                        <span class="total-count">2편</span>
+                        <span class="total-price">5,500퍼니</span>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="bottom-area">
+            <div class="bottom-btn-area">
+                <button class="get-ticket">내 티켓 목록</button>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const $getTktBtn = document.querySelector('.get-ticket');
+    const $playTktBtn = document.querySelector('.ticket-play-btn');
+
+    $getTktBtn.addEventListener('click', () => {
+        location.href = "./off-payment.html";
+    });
+
+    $playTktBtn.addEventListener('click', () => {
+        location.href = "./off-player.html";
+    });
+
+</script>
+</html>

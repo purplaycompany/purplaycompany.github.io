@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>온라인 상영관</title>
+</head>
+<body>
+    <div class="mobile-container">
+        <section class="header-area">
+            <nav class="top-area wrapper">
+                <a class="back" onclick="history.back();">
+                    <img src="/img/back.png" alt="뒤로 가기">
+                </a>
+                <span>한국장편경쟁1. [멜로가 체질]</span>
+                <div class="search-notice">
+                    <button>🔍</button>
+                </div>
+            </nav>
+        </section>
+        <section class="off-main dark">
+            <div class="off-movie-wrapper">
+                <section class="banner-wrapper">
+                    <div class="banner-area">
+                        <img src="https://via.placeholder.com/1920x1080" alt="슬라이드배너_이미지">
+                    </div>
+                    <div class="player-control">
+                        <div class="player-bar"></div>
+                        <div class="player-menu wrapper">
+                            <div class="playtime">0:02 / 0:15</div>
+                            <div class="player-btn wrapper">
+                                <button class="cc-btn">
+                                    <img src="./img/translate.png" alt="자막 설정">
+                                </button>
+                                <button class="quality-btn">
+                                    1080p
+                                </button>
+                                <button class="speed-btn">1.0x</button>
+                                <button class="fullscreen-btn">
+                                    <img src="./img/fullscreen.png" alt="전체 화면">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="off-now-playing wrapper">
+                    <div class="player-title wrapper">
+                        <button class="prev">
+                            <img src="./img/previous.png" alt="이전으로">
+                        </button>
+                        <h3>[광고] 하이브주식회사</h3>
+                        <button class="next">
+                            <img src="./img/next.png" alt="다음으로">
+                        </button>
+                    </div>
+                </section>
+                <div class="playing-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eaque dolorem unde voluptates rerum facilis eveniet, est esse eum laboriosam aliquam reiciendis reprehenderit molestias dolores accusantium sapiente ab recusandae illum!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eaque dolorem unde voluptates rerum facilis eveniet, est esse eum laboriosam aliquam reiciendis reprehenderit molestias dolores accusantium sapiente ab recusandae illum!
+                </div>
+            </div>
+        </section>
+        <section class="bottom-area">
+            <div class="playlist-popup wrapper">
+                <button class="popup-slider"></button>
+                <h3>상영 목록</h3>
+                <div class="playlist">
+                    <h4 style="font-weight: 500;">[광고] 하이브주식회사</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[광고] 어쩌구기업명</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                    <h4>[영화] 어쩌구영화제목영화제목화하</h4>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const $popupSlider = document.querySelector('.popup-slider');
+    const $playlist = document.querySelector('.playlist');
+
+    $popupSlider.addEventListener('click', () => {
+        if($playlist.style.display != 'none') {
+            $playlist.style.display = 'none';
+        } else {
+            $playlist.style.display = 'block';
+
+        }
+    });
+
+</script>
+</html>
