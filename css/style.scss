@@ -692,6 +692,7 @@ body {
 
             p {
                 padding-bottom: 0.5rem;
+                line-height: 1.2rem;
             }
 
             .close {
@@ -706,6 +707,7 @@ body {
             button {
                 margin: auto;
                 width: 2rem;
+                background-color: rgba(0,0,0,0);
                 cursor: pointer;
 
                 img {

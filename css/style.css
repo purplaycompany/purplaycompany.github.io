@@ -582,6 +582,7 @@ body {
 }
 .off-main .off-movie-wrapper .off-user-guide p {
   padding-bottom: 0.5rem;
+  line-height: 1.2rem;
 }
 .off-main .off-movie-wrapper .off-user-guide .close {
   height: 2rem;
@@ -593,6 +594,7 @@ body {
 .off-main .off-movie-wrapper .off-user-guide button {
   margin: auto;
   width: 2rem;
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 .off-main .off-movie-wrapper .off-user-guide button img {
