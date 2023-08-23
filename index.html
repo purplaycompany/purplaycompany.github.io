@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>영화제 티켓부스</title>
+    <title>영화제 홈</title>
 </head>
 <body>
     <div class="mobile-container">
@@ -85,7 +85,7 @@
                     </ol>
                 </section>
                 <section class="off-btn-area">
-                    <button class="off-btn-ticket">티켓 구매</button>
+                    <button class="off-btn-ticket" onclick="location.href= './off-ticket.html'">티켓 구매</button>
                     <div class="wrapper">
                         <button>홈페이지</button>
                         <button>SNS</button>
@@ -342,7 +342,7 @@
                     <li class="bottom-menu-item ">
                         <span>여성영화</span>
                     </li>
-                    <li class="bottom-menu-itemn">
+                    <li class="bottom-menu-item my-account">
                         <a href="./login.html">
                             <span>MY</span>
                         </a>
@@ -352,4 +352,20 @@
         </section>
     </div>
 </body>
+
+<script>
+    let $myAccount = document.querySelector('.my-account');
+
+    const loggedInCheck = () => {
+        if ( sessionStorage.getItem('login') === 'true') {
+            $myAccount.innerHTML = `
+                <a href="#">
+                    <img src="./img/user.png" alt="내 프로필 이미지">
+                </a>
+            `;
+        }
+    };
+
+    loggedInCheck();
+</script>
 </html>

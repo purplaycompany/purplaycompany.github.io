@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="mobile-container">
-        <nav class="top-area wrapper">
+        <nav class="top-area wrapper" style="box-shadow: none;">
             <button class="back">
                 <a onclick="history.back();">
                     <img src="/img/back.png" alt="뒤로 가기">
@@ -22,11 +22,11 @@
             <div class="login-area">
                 <div class="id-pwd-area">
                     <div class="input-area">
-                        <label>이메일</label>
+                        <label name="email">이메일</label>
                         <input id="email" class="login-input" type="email" name="email" placeholder="이메일"/>
                     </div>
                     <div class="input-area">
-                        <label>비밀번호</label>
+                        <label name="pwd">비밀번호</label>
                         <input id="password" class="login-input" type="password" name="password" placeholder="비밀번호"/>
                     </div>
                     <p class="login-error-txt">에러메시지</p>
@@ -69,4 +69,64 @@
         </div>
     </section>
 </body>
+<script>
+    const $TEST_ID = 'test@purplay.co.kr';
+    const $TEST_PWD = '12345678';
+
+    const $inputId = document.querySelector('input[name=email]');
+    const $inputPwd = document.querySelector('input[name=password]');
+
+    let $errorTxt = document.querySelector('.login-error-txt');
+
+    const $loginBtn = document.querySelector('.login-btn');
+
+    const init = () => {
+        window.addEventListener('keydown', (e) => {
+            if( e.key === 'Enter') {
+                loginCheck();
+            }
+        });
+    };
+
+    const loginCheck = () => {
+        if ( $inputId.value ) {
+            if ( $inputPwd.value ) {
+                if ( $inputId.value == $TEST_ID) {
+                    if( $inputPwd.value == $TEST_PWD ) {
+                        sessionStorage.setItem('login', 'true');
+                        location.href = './index.html';
+                    } else {
+                        $inputPwd.focus();
+                        $errorTxt.innerText = '비밀번호를 확인해주세요.';
+                        $errorTxt.style.display = 'block';
+                    }
+                } else {
+                    $inputId.focus();
+                    $errorTxt.innerText = '가입되지 않은 이메일입니다.';
+                    $errorTxt.style.display = 'block';
+                } 
+            } else {
+                $inputPwd.focus();
+                $errorTxt.innerText = '비밀번호를 입력해주세요.';
+                $errorTxt.style.display = 'block';
+            }
+        } else {
+            $inputId.focus();
+            $errorTxt.innerText = '이메일을 입력해주세요.';
+            $errorTxt.style.display = 'block';
+        }
+    };
+
+
+    $loginBtn.addEventListener('click', () => {
+        loginCheck();
+    });
+
+    $inputId.addEventListener('change', () => {
+        $errorTxt.style.display = 'none';
+    })
+
+    init();
+    
+</script>
 </html>

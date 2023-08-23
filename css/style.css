@@ -148,6 +148,8 @@ body {
   margin-bottom: 1rem;
   padding-top: 0.5rem;
   padding-left: 0.5rem;
+  font-size: 0.8rem;
+  color: red;
 }
 .main .login-area .login-btn {
   margin-bottom: 1rem;
@@ -581,6 +583,13 @@ body {
 .off-main .off-movie-wrapper .off-user-guide p {
   padding-bottom: 0.5rem;
 }
+.off-main .off-movie-wrapper .off-user-guide .close {
+  height: 2rem;
+  overflow: hidden;
+}
+.off-main .off-movie-wrapper .off-user-guide .open {
+  height: auto;
+}
 .off-main .off-movie-wrapper .off-user-guide button {
   margin: auto;
   width: 2rem;
@@ -688,7 +697,7 @@ body {
   overflow: hidden;
 }
 .bottom-area .bottom-menu {
-  width: 100%;
+  width: auto;
   height: 4rem;
   background-color: #e3e3e3;
   cursor: pointer;
@@ -699,6 +708,30 @@ body {
   align-items: center;
   justify-content: space-around;
   height: 100%;
+}
+.bottom-area .bottom-menu .bottom-menu-list .bottom-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 100%;
+  text-align: center;
+}
+.bottom-area .bottom-menu .bottom-menu-list .selected {
+  font-weight: 700;
+}
+.bottom-area .bottom-menu .bottom-menu-list .my-account a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+}
+.bottom-area .bottom-menu .bottom-menu-list .my-account a img {
+  padding: 4px;
+  height: 32px;
+  border: 1px solid #0f0f0f;
+  border-radius: 20px;
 }
 .bottom-area .bottom-btn-area {
   padding: 1rem;
@@ -948,6 +981,10 @@ body {
 
 .right-end {
   justify-content: end;
+}
+
+.now {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
